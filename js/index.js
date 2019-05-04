@@ -43,8 +43,9 @@ document.addEventListener('copy', function(e){
     alert('Are you trying to steal the image of the Sacred Fun Bus?')
 });
 
-document.addEventListener('resize', function(e){
-    alert('resized!')
+document.addEventListener('contextmenu', function(e){
+    alert('Dont right click on things! It spreads the Dreaded Blue Plague!');
+    event.target.style.backgroundColor = "blue";
 });
 
 document.addEventListener('drag', function(e){
