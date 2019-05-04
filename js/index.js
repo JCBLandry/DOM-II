@@ -3,7 +3,8 @@ let busimg = document.getElementById("busimg");
 console.log(busimg);
 
 busimg.addEventListener('mouseover', function(e){
-console.log('imghovered!')
+console.log('imghovered!');
+busimg.style.minHeight= "500px";
 });
 
 document.addEventListener('scroll', function(e){
@@ -11,15 +12,20 @@ document.addEventListener('scroll', function(e){
 });
 
 busimg.addEventListener('click', function(e){
-console.log('clicked!')
+console.log('clicked!');
+busimg.style.minWidth= "1000px";
 });
+
+let navplane = document.querySelector("nav");
 
 document.addEventListener('keydown', function(e){
     console.log('key pressed!')
+    navplane.style.backgroundColor = "red";
 });
 
 document.addEventListener('keyup', function(e){
     console.log('key let go!')
+    navplane.style.backgroundColor= "white";
 });
 
 document.addEventListener('cut', function(e){
