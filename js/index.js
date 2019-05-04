@@ -2,7 +2,7 @@
 let busimg = document.getElementById("busimg");
 console.log(busimg);
 
-let logo = document.querySelector("h1");
+let navbut = document.querySelectorAll("nav-link");
 
 let navplane = document.querySelector("nav");
 
@@ -54,4 +54,36 @@ document.addEventListener('drag', function(e){
 
 document.addEventListener('paste', function(e){
     alert('Hey! Dont leave that here!')
+});
+
+// navbut.addEventListener('submit', function(e){
+//     e.preventDefault();
+// });
+
+
+// let navbut = document.querySelectorAll("nav-link");
+
+navbut.forEach((e) => {
+ e.addEventListener('click', function(){
+ e.preventDefault();
+ });
+});
+
+
+const h1 = document.querySelector('h1');
+const header = document.querySelector('header');
+const nav = document.querySelector('nav');
+
+
+header.addEventListener('click', function(e) {
+  alert('This is the Header!');
+  e.stopPropagation();
+});
+h1.addEventListener('click', function(e) {
+  alert('This is the H1!');
+  e.stopPropagation();
+});
+nav.addEventListener('click', function(e) {
+  alert('This is the nav!');
+  e.stopPropagation();
 });
