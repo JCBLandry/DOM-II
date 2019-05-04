@@ -1,12 +1,17 @@
 // Your code goes here
 let busimg = document.getElementById("busimg");
-console.log(busimg);
 
-let navbut = document.querySelectorAll("nav-link");
+let navbut = document.querySelectorAll(".nav-link");
 
 let navplane = document.querySelector("nav");
 
 let content = document.querySelector("p");
+
+const h1 = document.querySelector('h1');
+
+const header = document.querySelector('header');
+
+const nav = document.querySelector('nav');
 
 busimg.addEventListener('mouseover', function(e){
 console.log('imghovered!');
@@ -56,34 +61,25 @@ document.addEventListener('paste', function(e){
     alert('Hey! Dont leave that here!')
 });
 
-// navbut.addEventListener('submit', function(e){
-//     e.preventDefault();
-// });
-
-
-// let navbut = document.querySelectorAll("nav-link");
-
-navbut.forEach((e) => {
- e.addEventListener('click', function(){
- e.preventDefault();
- });
-});
-
-
-const h1 = document.querySelector('h1');
-const header = document.querySelector('header');
-const nav = document.querySelector('nav');
-
-
 header.addEventListener('click', function(e) {
   alert('This is the Header!');
   e.stopPropagation();
 });
+
 h1.addEventListener('click', function(e) {
   alert('This is the H1!');
   e.stopPropagation();
 });
+
 nav.addEventListener('click', function(e) {
   alert('This is the nav!');
   e.stopPropagation();
 });
+
+
+
+navbut.forEach(a => {
+        a.addEventListener('click', e => {
+        e.preventDefault();
+       });
+    });
