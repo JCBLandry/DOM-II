@@ -2,6 +2,10 @@
 let busimg = document.getElementById("busimg");
 console.log(busimg);
 
+let logo = document.querySelector("logo-heading");
+
+let navplane = document.querySelector("nav");
+
 busimg.addEventListener('mouseover', function(e){
 console.log('imghovered!');
 busimg.style.minHeight= "500px";
@@ -16,8 +20,6 @@ console.log('clicked!');
 busimg.style.minWidth= "1000px";
 });
 
-let navplane = document.querySelector("nav");
-
 document.addEventListener('keydown', function(e){
     console.log('key pressed!')
     navplane.style.backgroundColor = "red";
@@ -29,21 +31,22 @@ document.addEventListener('keyup', function(e){
 });
 
 document.addEventListener('cut', function(e){
-    alert('whatcha cuttin on?')
+    alert('Cut as you like! The Sacred Fun Bus is impervious to your strikes!')
 });
 
 document.addEventListener('copy', function(e){
-    alert('whatcha stealin??')
+    alert('Are you trying to steal the image of the Sacred Fun Bus?')
 });
 
 document.addEventListener('resize', function(e){
     alert('resized!')
 });
 
-document.addEventListener('funnscreenchange', function(e){
+document.addEventListener('resize', function(e){
     alert('fullscreen shift!')
+    logo.style.backgroundColor = "purple";
 });
 
 document.addEventListener('paste', function(e){
-    alert('dont leave that here!')
+    alert('Hey! Dont leave that here!')
 });
