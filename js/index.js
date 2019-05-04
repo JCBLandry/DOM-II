@@ -2,9 +2,11 @@
 let busimg = document.getElementById("busimg");
 console.log(busimg);
 
-let logo = document.querySelector("logo-heading");
+let logo = document.querySelector("h1");
 
 let navplane = document.querySelector("nav");
+
+let content = document.querySelector("p");
 
 busimg.addEventListener('mouseover', function(e){
 console.log('imghovered!');
@@ -13,6 +15,9 @@ busimg.style.minHeight= "500px";
 
 document.addEventListener('scroll', function(e){
     console.log('scrolled!')
+    content.style.color = 'pink';
+    content.style.backgroundColor = 'black';
+
 });
 
 busimg.addEventListener('click', function(e){
@@ -42,9 +47,8 @@ document.addEventListener('resize', function(e){
     alert('resized!')
 });
 
-document.addEventListener('resize', function(e){
-    alert('fullscreen shift!')
-    logo.style.backgroundColor = "purple";
+document.addEventListener('drag', function(e){
+    console.log('Are you trying to take our picture, you fiend?! Put it back!!')
 });
 
 document.addEventListener('paste', function(e){
